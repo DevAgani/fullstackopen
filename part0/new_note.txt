@@ -1,0 +1,14 @@
+title New Note Single page app
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+browser-->server: Request Payload : {"content":"some content","date":"2020-07-23:04:42:164z"}
+browser-->server: Request Header : Content-type: application/json
+server-->browser: Status code : 201 Created
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+image: https://www.websequencediagrams.com/files/render?link=RQA158sDKcrNB4tvUsqjyDtTYHcL6v1SkpG2k9Bvi8y4Jr9QswSjZGyqNkH9D0SH

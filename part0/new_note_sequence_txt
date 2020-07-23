@@ -1,0 +1,41 @@
+title Create note
+
+note over browser:
+user types something to the
+input form and clicks submit
+end note
+
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
+browser-->server: Form Date : note : "something"
+note over server:
+server responds with a status
+code 302
+end note
+server-->browser: Status code 302
+
+note over browser:
+browser is reloaded and this causes
+fetching of the assets and files from
+the server
+end note
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: main.css
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js
+server-->browser: main.js
+
+note over browser:
+browser starts executing js-code
+that requests JSON data from server
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: [{ content: "HTML is easy", date: "2019-05-23" }, ...]
+
+note over browser:
+browser executes the event handler
+that renders notes to display
+end note
+
+
+image: https://www.websequencediagrams.com/files/render?link=hXqU992Boigq4lxu0CpLTlLshmzItCZjSsMuVMmyDjfGsyt4Dso36DHXMVFy4iHo
